@@ -14,13 +14,14 @@
 		function add(value)
 		{
 			result += value;
-			alert("result : "+result);
+			alert("result : " + result);
 			return result;
 		}
 
 		function receive(msg)
 		{
 			alert("msg : "+msg);
+			return "wev receive message : " + msg;
 		}
 	</script>
 </head>
@@ -35,8 +36,10 @@
 	<a href="workute_webview://close_webview?fade=false">Workute Close</a></br>
 	</br>
 	<button onclick="add(1)">Add1</button>
-
+	</br>
+	</br>
 	<button onclick="receive('test messag')">Send Msg</button>	
+	</br>
 
 </body>
 </html>
