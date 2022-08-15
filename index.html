@@ -8,12 +8,35 @@
 		var cookie = document.cookie;
 		alert(cookie);
 	</script>
+	<script>
+		var result = 0;
+
+		function add(value)
+		{
+			result += value;
+			alert("result : "+result);
+			return result;
+		}
+
+		function receive(msg)
+		{
+			alert("msg : "+msg);
+		}
+	</script>
 </head>
 <body>
 	<h1>Alert Cookie</h1>
-	<a href="uniwebview://action?key=value&anotherKey=anotherValue">UniWebView Test</a>
-	<a href="uniwebview://close_webview?key=value&anotherKey=anotherValue">UniWebView Close</a>
-	<a href="workute_webview://savedata?workute=correct&fitbuddybuddy=wrong">Workute Test</a>
-	<a href="workute_webview://close_webview?fade=false">Workute Close</a>
+	<a href="uniwebview://action?key=value&anotherKey=anotherValue">UniWebView Test</a></br>
+	</br>
+	<a href="uniwebview://close_webview?key=value&anotherKey=anotherValue">UniWebView Close</a></br>
+	</br>
+	<a href="workute_webview://savedata?workute=correct&fitbuddybuddy=wrong">Workute Test</a></br>
+	</br>
+	<a href="workute_webview://close_webview?fade=false">Workute Close</a></br>
+	</br>
+	<button onclick="add(1)">Add1</button>
+
+	<button onclick="receive('test messag')">Send Msg</button>	
+
 </body>
 </html>
