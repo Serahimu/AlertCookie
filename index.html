@@ -23,6 +23,12 @@
 			alert("msg : "+msg);
 			return "wev receive message : " + msg;
 		}
+
+		function send_message(msg)
+		{
+			window.location.href = "uniwebview://add?nothing";
+			console.log("send message");
+		}
 	</script>
 </head>
 <body>
@@ -40,6 +46,11 @@
 	</br>
 	<button onclick="receive('test messag')">Send Msg</button>	
 	</br>
-
+	</br>
+	<button onclick="send_message('add')"> Send Add Message</button>
+	</br>
+	</br>
+	<button onclick="send_message('receive_msg')"> Send Receive Message</button>
+	</br>
 </body>
 </html>
