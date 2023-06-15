@@ -3,14 +3,14 @@
 <head>
   <title>WebViewTest</title>
   <script>
-    function printInput() {
-      var userInput = document.getElementById("userInput").value;
-      console.log(userInput);
-    }
+	function sendMsg(){
+		var userInput = document.getElementById("userInput").value;
+		window.location.href = userInput;
+	}
   </script>
 </head>
 <body>
   <input type="text" id="userInput" placeholder="輸入文字">
-  <button onclick="printInput()">送出</button>
+  <button onclick="sendMsg()">送出</button>
 </body>
 </html>
