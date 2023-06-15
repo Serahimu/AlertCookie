@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alert Cookie</title>
-	<script type="text/javascript">
-		var cookie = document.cookie;
-		alert(cookie);
-	</script>
+  <title>WebViewTest</title>
+  <script>
+    function printInput() {
+      var userInput = document.getElementById("userInput").value;
+      console.log(userInput);
+    }
+  </script>
 </head>
 <body>
-	<h1>Alert Cookie</h1>
-	<a href="uniwebview://action?key=value&anotherKey=anotherValue">Tap Me</a>
+  <input type="text" id="userInput" placeholder="輸入文字">
+  <button onclick="printInput()">送出</button>
 </body>
 </html>
