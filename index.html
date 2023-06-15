@@ -1,56 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alert Cookie</title>
-	<script type="text/javascript">
-		var cookie = document.cookie;
-		alert(cookie);
-	</script>
-	<script>
-		var result = 0;
-
-		function add(value)
-		{
-			result += value;
-			alert("result : " + result);
-			return result;
-		}
-
-		function receive(msg)
-		{
-			alert("msg : "+msg);
-			return "wev receive message : " + msg;
-		}
-
-		function send_message(msg)
-		{
-			window.location.href = "uniwebview://"+ msg +"?nothing";
-			console.log("send message");
-		}
-	</script>
+  <title>WebViewTest</title>
+  <script>
+    function printInput() {
+      var userInput = document.getElementById("userInput").value;
+      console.log(userInput);
+    }
+  </script>
 </head>
 <body>
-	<h1>Alert Cookie</h1>
-	<a href="uniwebview://action?key=value&anotherKey=anotherValue">UniWebView Test</a></br>
-	</br>
-	<a href="uniwebview://close_webview?key=value&anotherKey=anotherValue">UniWebView Close</a></br>
-	</br>
-	<a href="workute_webview://savedata?workute=correct&fitbuddybuddy=wrong">Workute Test</a></br>
-	</br>
-	<a href="workute_webview://close_webview?fade=false">Workute Close</a></br>
-	</br>
-	<button onclick="add(1)">Add1</button>
-	</br>
-	</br>
-	<button onclick="receive('test messag')">Send Msg</button>	
-	</br>
-	</br>
-	<button onclick="send_message('add')"> Send Add Message</button>
-	</br>
-	</br>
-	<button onclick="send_message('receive_msg')"> Send Receive Message</button>
-	</br>
+  <input type="text" id="userInput" placeholder="輸入文字">
+  <button onclick="printInput()">送出</button>
 </body>
 </html>
