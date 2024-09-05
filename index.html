@@ -2,15 +2,27 @@
 <html>
 <head>
   <title>WebViewTest</title>
- <script type="text/javascript">
+     <script type="text/javascript">
         function sendToAndroid() {
-            // 向 Android 傳送資料
-            AndroidInterface.receiveData("這是一個從網頁端發送的資料！");
+	var userInput = document.getElementById("userInput").value;
+            AndroidInterface.receiveData(userInput);
+        }
+    </script>
+ <script type="text/javascript">
+        function sendToAndroidWithString() {
+            AndroidInterface.receiveData("A Simple String Data");
+        }
+    </script>
+   <script type="text/javascript">
+        function sendToAndroidWithInt() {
+            AndroidInterface.receiveData(5566);
         }
     </script>
 </head>
 <body>
   <input type="text" id="userInput" placeholder="輸入文字">
   <button onclick="sendToAndroid()">送出</button>
+   <button onclick="sendToAndroidWithString()">送出字串</button>
+   <button onclick="sendToAndroidWithInt()">送出數字</button>
 </body>
 </html>
