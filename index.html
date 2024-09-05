@@ -18,6 +18,15 @@
             AndroidInterface.receiveData(5566);
         }
     </script>
+	  <script type="text/javascript">
+        // 定義一個處理來自 Android 應用程式的資料的函數
+        function handleDataFromApp(data) {
+            alert("接收到來自 Android 的資料: " + data);
+            // 在這裡可以進行其他的處理
+            console.log("來自 Android 的資料: " + data);
+		AndroidInterface.receiveData("收到來自Android的訊息:"+data)
+        }
+    </script>
 </head>
 <body>
   <input type="text" id="userInput" placeholder="輸入文字">
